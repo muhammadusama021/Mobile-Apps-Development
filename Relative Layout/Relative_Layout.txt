@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frontPageActivity">
+
+    <TextView
+        android:id="@+id/toptext"
+
+        android:text="QEEMAT PUNJAB"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_width="match_parent">
+
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/toptext">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Urdu"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                ></RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"></RadioButton>
+        </RelativeLayout>
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/fresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginLeft="30dp"
+        android:background="@color/purple_700"
+        android:layout_marginRight="30dp"
+        android:padding="10dp"
+        >
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_buy_now">
+
+        </ImageView>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FreshOnline"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/image1">
+
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/fresh_layout">
+
+        <RelativeLayout
+
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="30dp"
+
+            android:background="@color/purple_200"
+            android:layout_marginRight="30dp"
+
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_flour">
+
+            </ImageView>
+            <TextView
+
+                android:layout_width="120dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:text="Essential Commodities Rates"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/image2">
+
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/purple_200"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_fruits">
+
+            </ImageView>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image5"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:text="Fruit Rates">
+
+            </TextView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:layout_below="@id/layout5">
+
+        <RelativeLayout
+
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/purple_200"
+
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/image6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_vegetables">
+
+            </ImageView>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Vegetables Rates"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/image6">
+
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/purple_200"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+
+
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/image6a"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_poultry">
+
+            </ImageView>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image6a"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:text="Poultry Rates">
+
+            </TextView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout6"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/purple_700"
+
+        android:padding="10dp"
+
+        >
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_contact">
+
+        </ImageView>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complaints"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/image3">
+
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>
