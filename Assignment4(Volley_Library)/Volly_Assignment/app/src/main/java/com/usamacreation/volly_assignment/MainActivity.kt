@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import com.android.volley.DefaultRetryPolicy
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.ImageRequest
@@ -141,6 +142,37 @@ class MainActivity : AppCompatActivity() {
     private fun Add_Post_parameter()
     {
         Toast.makeText(this,"Adding Post Parameter",Toast.LENGTH_LONG).show()
+        val pDialog = ProgressDialog(this)
+        pDialog.setMessage("Loading...PLease wait")
+        pDialog.show()
+
+        val view:TextView=findViewById(R.id.ViewBox)
+        val queue= Volley.newRequestQueue(this)
+        val url = "https://run.mocky.io/v3/cc1eb953-b35f-49b0-b20e-e43232921464"
+
+        val params = HashMap<String,String>()
+        params["name"] = "Muhammad Usama"
+        params["Class"] = "BSE-7B"
+        params["Reg_No"] = "FA18-BSE-021"
+        val jsonObject = JSONObject(params as Map<*, *>)
+
+        // Volley post request with parameters
+        val PostParam = JsonObjectRequest(
+                Request.Method.POST,
+                url,
+                jsonObject,
+                Response.Listener { response ->
+                    view.text = "Response: $response"
+                    pDialog.hide();
+                },
+                Response.ErrorListener{error->
+                    // Error in request
+                    view.text = "Volley error: $error"
+                    pDialog.hide();
+        })
+        // Add the volley post request to the request queue
+        queue.add(PostParam)
+
     }
 
     /*####### (5) Adding Request Headers ########*/
